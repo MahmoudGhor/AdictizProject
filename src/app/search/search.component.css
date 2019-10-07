@@ -1,0 +1,72 @@
+.remaining-space {
+  margin: auto;
+  font-size: 30px;
+}
+
+.pic {
+  background-image: url('~/assets/img/Essential-Books.jpg');
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+  padding-top: 10%;
+  text-align: center;
+}
+
+.container-fluid {
+  width: 90%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.text-white {
+  color: #fff!important;
+  margin-top: -2.5%
+}
+
+.h1, h1 {
+  font-size: 2.5rem;
+  margin-bottom: .5rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+  margin-top: 0;
+}
+.container {
+  width: 50%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.card {
+  border-radius: 10px;
+  background-color: #d3d3d3;
+}
+
+.card-body {
+   -ms-flex: 1 1 auto;
+   flex: 1 1 auto;
+   padding: 1.25rem;
+ }
+
+.article {
+  text-align: center;
+}
+
+.example-full-width {
+  width: 50%;
+}
+
+
+
