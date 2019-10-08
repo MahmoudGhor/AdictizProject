@@ -1,0 +1,32 @@
+<ng-template #progress>
+  <div class="divSpinner">
+    <mat-spinner color="accent"></mat-spinner>
+  </div>
+</ng-template>
+<ng-container *ngIf="bookList ; else progress">
+  <mat-grid-list rowHeight="400px" cols="3" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let book of bookList">
+      <mat-card class="example-card">
+        <mat-card-content>
+          <div>
+            <mat-card-header>
+              <mat-card-title class="matCardTitle">{{book.volumeInfo.title}}</mat-card-title>
+              <mat-card-subtitle>{{book.volumeInfo.authors}}</mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+              <div class="imageContainer">
+                <img mat-card-image class="image" src={{book.volumeInfo.imageLinks.smallThumbnail}}
+                     alt='{{book.volumeInfo.title}}'>
+              </div>
+              <div class="miniDescription">
+                <p
+                  class="overflow-ellipsis">{{book.volumeInfo.description ? book.volumeInfo.description : 'no description available ' }}</p>
+              </div>
+            </mat-card-content>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-container>
+

@@ -1,0 +1,100 @@
+.remaining-space {
+  margin: auto;
+  font-size: 30px;
+}
+
+.pic {
+  background-image: url('~/assets/img/Essential-Books.jpg');
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 300px;
+  width: 100%;
+  padding-top: 10%;
+  text-align: center;
+}
+
+.container-fluid {
+  width: 90%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.text-white {
+  color: #fff !important;
+  margin-top: -2.5%
+}
+
+.example-card {
+  width: 500px;
+  height: 500px;
+  background: #0f5b5f
+}
+
+
+.example-button-row {
+  float: left;
+}
+
+.image {
+  width: 200px;
+  height: 250px;
+}
+
+.article {
+  flex: 1 1 auto;
+  padding: 5%;
+  align-items: center;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+mat-card-header {
+  display: block !important;
+  text-align: center;
+}
+
+.imageContainer {
+  text-align: center;
+  margin-top: 10% !important;
+}
+
+.overflow-ellipsis {
+  text-overflow: ellipsis;
+}
+
+p {
+  line-height: 1.5em;
+  height: 3em;
+  padding: 2px 5px;
+  overflow: hidden;
+}
+
+.example-card:hover {
+  transform: scale(1);
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.divSpinner {
+  padding-top: 10%;
+  padding-left: 50%;
+}
+
+.matCardTitle{
+  font-size: 15px;
+}
+
+.miniDescription{
+  text-align: center;
+}
