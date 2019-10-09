@@ -10,7 +10,12 @@ export class BookApiService {
   }
 
   searchBookByName(name) {
-    const url = encodeURI(encodeURI('https://www.googleapis.com/books/v1/volumes?q=' + name));
+    const url = encodeURI(encodeURI('https://www.googleapis.com/books/v1/volumes?q=' + name + '&langRestrict=en'));
+    return this.http.get(url);
+  }
+
+  detailsBook(id) {
+    const url = encodeURI(encodeURI('https://www.googleapis.com/books/v1/volumes?q=isbn' + id + '&langRestrict=en'));
     return this.http.get(url);
   }
 }

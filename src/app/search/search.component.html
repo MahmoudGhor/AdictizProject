@@ -2,10 +2,10 @@
   <div class="card">
     <div class="card-body player">
       <div class="article">
-        <h3>Search Books</h3>
+        <h3 style="color: #fff">Search Books</h3>
       <br/>
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Book name" #search id="search" (keyup.enter)="OnSearch(search.value)">
+          <input matInput placeholder="Book name" #search id="search"   style="color: #fff" (keyup.enter)="OnSearch(search.value)">
         </mat-form-field>
         <br/>
         <button mat-raised-button color="accent" (click)="OnSearch(search.value)">Search</button>
