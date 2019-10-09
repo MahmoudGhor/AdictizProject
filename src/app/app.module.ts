@@ -6,7 +6,7 @@ import { SearchComponent } from './search/search.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   MatButtonModule,
-  MatCardModule,
+  MatCardModule, MatDialogModule,
   MatGridListModule,
   MatInputModule,
   MatProgressBarModule,
@@ -16,12 +16,14 @@ import {
 import { ResultComponent } from './result/result.component';
 import {BookApiService} from './service/book-api.service';
 import {HttpClientModule} from '@angular/common/http';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    ResultComponent
+    ResultComponent,
+    PopupComponent
   ],
   imports: [
     BrowserModule,
@@ -34,9 +36,11 @@ import {HttpClientModule} from '@angular/common/http';
     MatButtonModule,
     MatProgressBarModule,
     MatGridListModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatDialogModule
   ],
   providers: [BookApiService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [PopupComponent]
 })
 export class AppModule { }
