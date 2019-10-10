@@ -11,6 +11,8 @@ import {MatSnackBar} from '@angular/material';
 export class SearchComponent implements OnInit {
 
   language = '';
+  warningMsg = '';
+  warning = '';
 
   constructor(private router: Router,
               private translate: TranslateService,
@@ -29,7 +31,13 @@ export class SearchComponent implements OnInit {
     if (value.trim() !== '') {
       this.router.navigate(['/result', value]);
     } else {
-      this.snackBar.open('you must enter a book name', 'Warning', {
+      this.translate.get('warningMsg').subscribe(val => {
+        this.warningMsg = val;
+      });
+      this.translate.get('Warning').subscribe(val => {
+        this.warning = val;
+      });
+      this.snackBar.open(this.warningMsg, this.warning, {
         duration: 2000,
       });
     }

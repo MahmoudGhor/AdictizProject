@@ -44,14 +44,14 @@ export class ResultComponent implements OnInit {
         this.translate.get('Error').subscribe(value => {
           this.error = value;
         });
-        this.translate.get('ErrorMsg').subscribe(value => {
-          this.errorMsg = value;
-        });
         this.snackBar.open(this.errorBook, this.error, {
           duration: 5000,
         });
       }
     }, error1 => {
+      this.translate.get('ErrorMsg').subscribe(value => {
+        this.errorMsg = value;
+      });
       this.snackBar.open(this.errorMsg, this.error, {
         duration: 10000,
       });

@@ -1,16 +1,19 @@
 <div *ngIf="data.items;  else eroor">
   <mat-grid-list cols="6" rowHeight="150px">
     <mat-grid-tile [rowspan]="2" [colspan]="2">
-      <img style="height: 300px ; width: 250px" src={{book.volumeInfo.imageLinks !== undefined ? book.volumeInfo.imageLinks.smallThumbnail : '/assets/img/BookDefault.jpeg'}}/>
+      <img style="height: 300px ; width: 250px"
+           src="{{data.items[0].volumeInfo.imageLinks !== undefined ? data.items[0].volumeInfo.imageLinks.smallThumbnail : '/assets/img/BookDefault.jpeg'}}"/>
     </mat-grid-tile>
     <mat-grid-tile [rowspan]="2" [colspan]="4">
       <div class="text-inside-grid">
         <h3 style="font-weight: 500; font-size: 25px"> {{data.items[0].volumeInfo.title}} </h3>
         <ng-container *ngIf="data.items[0].volumeInfo.subtitle">
-          <h4 style="font-weight: 500; font-size: 14px">{{'Subtitle'|translate}}:   {{data.items[0].volumeInfo.subtitle}}  </h4>
+          <h4 style="font-weight: 500; font-size: 14px">{{'Subtitle'|translate}}
+            :   {{data.items[0].volumeInfo.subtitle}}  </h4>
         </ng-container>
         <h6 style="font-weight: 500;"> {{data.items[0].volumeInfo.publisher}}
-          , {{data.items[0].volumeInfo.publishedDate}} , {{data.items[0].volumeInfo.pageCount}} {{'Pages'|translate}} </h6>
+          , {{data.items[0].volumeInfo.publishedDate}}
+          , {{data.items[0].volumeInfo.pageCount}} {{'Pages'|translate}} </h6>
         <ng-container *ngIf="data.items[0].volumeInfo.categories">
           <h5 style="font-weight: 500;"> {{'Categories'|translate}}:
             <ng-container *ngFor="let categorie of data.items[0].volumeInfo.categories"> {{categorie}}&nbsp;
