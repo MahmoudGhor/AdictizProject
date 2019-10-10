@@ -17,9 +17,9 @@ export class AppComponent {
       translate.setDefaultLang('fr');
       translate.use('fr');
     } else {
+      localStorage.setItem('langue', navigator.language.split('-')[0]);
       translate.setDefaultLang(navigator.language.split('-')[0]);
       translate.use(navigator.language.split('-')[0]);
     }
-
   }
 }

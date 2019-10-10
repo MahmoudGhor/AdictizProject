@@ -13,7 +13,7 @@ export class BookApiService {
 
   searchBookByName(name) {
     const url = encodeURI(encodeURI('https://www.googleapis.com/books/v1/volumes?q=' + name + '&langRestrict=' +
-      navigator.language.split('-')[0]));
+      localStorage.getItem('langue')));
     return this.http.get(url);
   }
 
