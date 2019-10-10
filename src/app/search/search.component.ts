@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {TranslateService} from '@ngx-translate/core';
+import {MatSnackBar} from '@angular/material';
 
 @Component({
   selector: 'adz-search',
@@ -12,7 +13,8 @@ export class SearchComponent implements OnInit {
   language = '';
 
   constructor(private router: Router,
-              private translate: TranslateService) {
+              private translate: TranslateService,
+              private snackBar: MatSnackBar) {
   }
 
   ngOnInit() {
@@ -26,6 +28,10 @@ export class SearchComponent implements OnInit {
   OnSearch(value: string) {
     if (value.trim() !== '') {
       this.router.navigate(['/result', value]);
+    } else {
+      this.snackBar.open('you must enter a book name', 'Warning', {
+        duration: 2000,
+      });
     }
   }
 

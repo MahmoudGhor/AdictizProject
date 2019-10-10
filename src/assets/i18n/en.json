@@ -17,5 +17,8 @@
   "Language": "Language",
   "English": "English",
   "French": "French",
-  "Notif": "By default we use your navigator language , but you can change it"
+  "Notif": "By default we use your navigator language , but you can change it",
+  "Error": "Error",
+  "ErrorMsg": "Something wrong just happened please refresh the page",
+  "ErrorBook": "Something wrong with your book , please try with an other"
 }
