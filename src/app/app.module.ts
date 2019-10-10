@@ -10,20 +10,23 @@ import {
   MatGridListModule,
   MatInputModule,
   MatProgressBarModule,
-  MatProgressSpinnerModule,
+  MatProgressSpinnerModule, MatSelectModule,
   MatToolbarModule
 } from '@angular/material';
 import { ResultComponent } from './result/result.component';
 import {BookApiService} from './service/book-api.service';
 import {HttpClientModule} from '@angular/common/http';
 import { PopupComponent } from './popup/popup.component';
+import { FilterPipe } from './pipes/filter.pipe';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
     ResultComponent,
-    PopupComponent
+    PopupComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,9 @@ import { PopupComponent } from './popup/popup.component';
     MatProgressBarModule,
     MatGridListModule,
     MatProgressSpinnerModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSelectModule,
+    FormsModule
   ],
   providers: [BookApiService],
   bootstrap: [AppComponent],
