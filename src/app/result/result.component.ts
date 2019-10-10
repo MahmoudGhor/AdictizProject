@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {BookApiService} from '../service/book-api.service';
-import {ActivatedRoute} from '@angular/router';
-import {MatDialog} from '@angular/material';
+import {ActivatedRoute, Router} from '@angular/router';
+import {MatDialog, MatSnackBar} from '@angular/material';
 import {PopupComponent} from '../popup/popup.component';
 import {FilterPipe} from '../pipes/filter.pipe';
 
@@ -15,11 +15,13 @@ export class ResultComponent implements OnInit {
   bookList: any[];
   categoriesList: any[] = [];
   selectedCategory: any = '';
-  authorName: any = '';
+  searchName: any = '';
 
   constructor(private bookApiService: BookApiService,
               private route: ActivatedRoute,
-              public dialog: MatDialog) {
+              public dialog: MatDialog,
+              private router: Router,
+              private snackBar: MatSnackBar) {
   }
 
   ngOnInit() {
@@ -27,6 +29,10 @@ export class ResultComponent implements OnInit {
     this.bookApiService.searchBookByName(bookName).subscribe((res: Book) => {
       this.bookList = res.items;
       this.loadListCategories();
+    }, error1 => {
+      this.snackBar.open('Something wrong just happened please refresh the page', 'Error', {
+        duration: 10000,
+      });
     });
 
   }
@@ -61,5 +67,9 @@ export class ResultComponent implements OnInit {
 
   selectChangeHandler($event: Event) {
     this.selectedCategory = ($event.target as HTMLInputElement).value;
+  }
+
+  returnAction() {
+    this.router.navigate(['/search']);
   }
 }
