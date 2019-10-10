@@ -29,7 +29,7 @@
 }
 
 .text-white {
-  color: #fff!important;
+  color: #fff !important;
   margin-top: -2.5%
 }
 
@@ -42,6 +42,7 @@
   color: inherit;
   margin-top: 0;
 }
+
 .container {
   width: 50%;
   padding-right: 15px;
@@ -49,16 +50,17 @@
   margin-right: auto;
   margin-left: auto;
 }
+
 .card {
   border-radius: 10px;
-  background-color: #43ab6b;
+  background-color: #0f5b5f;
 }
 
 .card-body {
-   -ms-flex: 1 1 auto;
-   flex: 1 1 auto;
-   padding: 1.25rem;
- }
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1.25rem;
+}
 
 .article {
   text-align: center;
@@ -66,6 +68,23 @@
 
 .example-full-width {
   width: 50%;
+}
+
+.example-section {
+  margin-bottom: -4%;
+  margin-top: 20px;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+  color: #fff !important;
+}
+
+.notif{
+  text-align: center;
 }
 
 

@@ -2,14 +2,25 @@
   <div class="card">
     <div class="card-body player">
       <div class="article">
-        <h3 style="color: #fff">Search Books</h3>
-      <br/>
+        <h3 style="color: #fff">{{'SearchBooks'|translate}}</h3>
+        <br/>
         <mat-form-field class="example-full-width">
-          <input matInput placeholder="Book name" #search id="search"   style="color: #fff" (keyup.enter)="OnSearch(search.value)">
+          <input matInput placeholder="{{'BookName'|translate}}" #search id="search" style="color: #fff"
+                 (keyup.enter)="OnSearch(search.value)">
         </mat-form-field>
         <br/>
-        <button mat-raised-button color="accent" (click)="OnSearch(search.value)">Search</button>
+        <button mat-raised-button color="accent" (click)="OnSearch(search.value)">{{'Search'|translate}}</button>
+        <section class="example-section">
+          <label class="example-margin">{{'Language'|translate}}</label>
+          <mat-radio-group (change)="changeLangage()" [(ngModel)]="language">
+            <mat-radio-button class="example-margin" value="en">{{'English'|translate}}</mat-radio-button>
+            <mat-radio-button class="example-margin" value="fr">{{'French'|translate}}</mat-radio-button>
+          </mat-radio-group>
+        </section>
       </div>
     </div>
+  </div>
+  <div *ngIf="language===''">
+    <p class="notif"> {{'Notif'|translate}} </p>
   </div>
 </div>

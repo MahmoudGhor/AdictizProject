@@ -3,30 +3,75 @@
   font-size: 30px;
 }
 
-.pic {
+.webmadewell {
+  background-color: white;
+}
+body {
+  margin: 0;
+  background-color: dimgray;
+}
+.sample-header {
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
   background-image: url('~/assets/img/Essential-Books.jpg');
-  background-position: 50%;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 300px;
-  width: 100%;
-  padding-top: 10%;
-  text-align: center;
 }
-
-.container-fluid {
-  width: 90%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
+.sample-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: MidnightBlue;
+  opacity: 0.3;
+}
+.sample-header-section {
+  padding: 15% 0 10%;
+  max-width: 700px;
   margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  font-family: "Montserrat", sans-serif;
+}
+h1 {
+  position: relative;
+  color: #ffffff;
+  font-family: 'Raleway',sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 72px;
+  margin: 0 0 24px;
+  text-align: center;
+  text-transform: uppercase; }
+h2 {
+  color: #ffffff;
+  font-family: 'Raleway',sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 36px;
+  margin: 20px 20px 24px;
+  text-align: center;
+
+}
+.sample-section-wrap {
+  position: relative;
+  background-color: white;
+}
+.sample-section {
+  position: relative;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
 
 .text-white {
   color: #fff !important;

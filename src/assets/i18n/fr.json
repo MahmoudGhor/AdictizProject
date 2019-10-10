@@ -1,0 +1,21 @@
+{
+  "GoogleBookSearch": "Recherche Google Livres",
+  "FindYourFavoriteBooks": "Trouvez vos livres préférés",
+  "SearchBooks": "Rechercher des livres",
+  "BookName": "Nom du livre",
+  "Search": "Rechercher",
+  "Previous": "Précédent",
+  "ChooseYourCategorie": "Selectionnez votre catégorie",
+  "AuthorOrTitle": "Auteur ou titre",
+  "NoDescriptionAvailable": "Pas de description disponible",
+  "PageNotFound": "Désolé ! Ce contenu n'est pas disponible dans votre pays pour le moment.\nNous espérons pouvoir proposer le contenu que vous aimez dans d'autres pays très rapidement.\nN'hésitez pas à revenir sur cette page ultérieurement.",
+  "Subtitle": "Sous-titre",
+  "Pages": "pages",
+  "Categories": "catégories",
+  "Authors": "Auteur(s)",
+  "Description": "Description",
+  "Language": "Langue",
+  "English": "Anglais",
+  "French": "Français",
+  "Notif": "Par défaut, nous utilisons la langue de votre navigateur, mais vous pouvez la changer."
+}

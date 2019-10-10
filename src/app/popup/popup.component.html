@@ -7,18 +7,18 @@
       <div class="text-inside-grid">
         <h3 style="font-weight: 500; font-size: 25px"> {{data.items[0].volumeInfo.title}} </h3>
         <ng-container *ngIf="data.items[0].volumeInfo.subtitle">
-          <h4 style="font-weight: 500; font-size: 14px">subtitle:   {{data.items[0].volumeInfo.subtitle}}  </h4>
+          <h4 style="font-weight: 500; font-size: 14px">{{'Subtitle'|translate}}:   {{data.items[0].volumeInfo.subtitle}}  </h4>
         </ng-container>
         <h6 style="font-weight: 500;"> {{data.items[0].volumeInfo.publisher}}
-          , {{data.items[0].volumeInfo.publishedDate}} , {{data.items[0].volumeInfo.pageCount}} pages </h6>
+          , {{data.items[0].volumeInfo.publishedDate}} , {{data.items[0].volumeInfo.pageCount}} {{'Pages'|translate}} </h6>
         <ng-container *ngIf="data.items[0].volumeInfo.categories">
-          <h5 style="font-weight: 500;"> categories:
+          <h5 style="font-weight: 500;"> {{'Categories'|translate}}:
             <ng-container *ngFor="let categorie of data.items[0].volumeInfo.categories"> {{categorie}}&nbsp;
             </ng-container>
           </h5>
         </ng-container>
         <ng-container *ngIf="data.items[0].volumeInfo.authors">
-          <h5 style="font-weight: 500;"> Authors:
+          <h5 style="font-weight: 500;"> {{'Authors'|translate}}:
             <ng-container *ngFor="let author of data.items[0].volumeInfo.authors"> {{author}}&nbsp;</ng-container>
           </h5>
         </ng-container>
@@ -26,13 +26,11 @@
     </mat-grid-tile>
   </mat-grid-list>
   <ng-container *ngIf="data.items[0].volumeInfo.description">
-    <h4>Description</h4>
+    <h4>{{'Description'|translate}}</h4>
     <p style="font-family: Brothers Alternates ; font-size: 14px">{{data.items[0].volumeInfo.description}}</p>
   </ng-container>
 </div>
 <ng-template #eroor>
-  <span style="color: red"> Sorry! This content is not available in your country at the moment.
-We hope to be able to offer the content you like in other countries very quickly.
-Feel free to come back to this page later.</span>
+  <span style="color: red">{{'PageNotFound'|translate}}</span>
 </ng-template>
 
