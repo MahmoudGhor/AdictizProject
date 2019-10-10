@@ -17,5 +17,8 @@
   "Language": "Langue",
   "English": "Anglais",
   "French": "Français",
-  "Notif": "Par défaut, nous utilisons la langue de votre navigateur, mais vous pouvez la changer."
+  "Notif": "Par défaut, nous utilisons la langue de votre navigateur, mais vous pouvez la changer.",
+  "Error": "Erreur",
+  "ErrorMsg": "Quelque chose ne va pas juste s'il vous plaît rafraîchir la page",
+  "ErrorBook": "Quelque chose ne va pas avec votre livre, s'il vous plaît essayer avec un autre"
 }

@@ -4,6 +4,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 import {MatDialog, MatSnackBar} from '@angular/material';
 import {PopupComponent} from '../popup/popup.component';
 import {FilterPipe} from '../pipes/filter.pipe';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'adz-result',
@@ -13,24 +14,45 @@ import {FilterPipe} from '../pipes/filter.pipe';
 })
 export class ResultComponent implements OnInit {
   bookList: any[];
+  charged = false;
   categoriesList: any[] = [];
   selectedCategory: any = '';
   searchName: any = '';
+  errorBook: any = '';
+  error: any = '';
+  errorMsg: any = '';
 
   constructor(private bookApiService: BookApiService,
               private route: ActivatedRoute,
               public dialog: MatDialog,
               private router: Router,
-              private snackBar: MatSnackBar) {
+              private snackBar: MatSnackBar,
+              private translate: TranslateService) {
   }
 
   ngOnInit() {
     const bookName = this.route.snapshot.params.book;
     this.bookApiService.searchBookByName(bookName).subscribe((res: Book) => {
-      this.bookList = res.items;
-      this.loadListCategories();
+      if (res.items) {
+        this.bookList = res.items;
+        this.loadListCategories();
+      } else {
+        this.charged = true;
+        this.translate.get('ErrorBook').subscribe(value => {
+          this.errorBook = value;
+        });
+        this.translate.get('Error').subscribe(value => {
+          this.error = value;
+        });
+        this.translate.get('ErrorMsg').subscribe(value => {
+          this.errorMsg = value;
+        });
+        this.snackBar.open(this.errorBook, this.error, {
+          duration: 5000,
+        });
+      }
     }, error1 => {
-      this.snackBar.open('Something wrong just happened please refresh the page', 'Error', {
+      this.snackBar.open(this.errorMsg, this.error, {
         duration: 10000,
       });
     });
